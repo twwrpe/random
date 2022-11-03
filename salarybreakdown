@@ -1,0 +1,35 @@
+## created 11/03/22
+## salary breakdown
+
+# first iteration of code
+'''
+print("Converts your salary down to rates\n")
+salary = int(input("salary: "))
+monthly = salary//12
+weekly = monthly//2
+hourly = salary//12//2/80
+
+print(f"monthly rate: {monthly}")
+print(f"bi-weekly rate: {weekly}")
+print(f"hourly rate: {hourly}")
+'''
+
+print("Converts your salary down to rates\n")
+run = "y"
+salary = int(input("salary: "))
+
+# second iteration of code 
+# algorithm to determine the breakdown
+while run == "y":
+  monthly = salary//12
+  weekly = monthly//2
+  hourly = salary//12//2/80
+  print(f'''monthly: ${monthly}
+bi-weekly: ${weekly}
+hourly: ${hourly}''')
+  run = input("check another rate?: (y/n): ")
+  if run == "y":
+    salary = int(input("salary: "))
+  elif run == "n":
+    run = "n"
+print("\nbye!")
